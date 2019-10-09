@@ -28,7 +28,7 @@ Sub XMLImport()
         , ImportMap:=Nothing, Overwrite:=True, Destination:=Range("$A$A")
 End Sub
 
-
+```
 alert_off = "Application.DisplayAlerts = False"
 
 vba_alert_off = f'''Sub AlertOff()
@@ -36,12 +36,14 @@ vba_alert_off = f'''Sub AlertOff()
 {vba_end}'''
 
 print(alert_off)
+```
+
 
 Sub AlertOff()
         Application.DisplayAlerts = False
 End Sub
 
-
+```
 alert_on = "Application.DisplayAlerts = True"
 
 vba_alert_on = f'''Sub AlertOn()
@@ -49,6 +51,8 @@ vba_alert_on = f'''Sub AlertOn()
 {vba_end}
 
 print(alert_on)
+```
+
 
 Sub AlertOff()
         Application.DisplayAlerts = True
@@ -56,7 +60,8 @@ End Sub
 
 
 ### Step 3: Import | Activate Excel
-```import win32com.client
+```
+import win32com.client
 
 xl = win32com.cleint.gencache.EnsureDispatch('Excel.Application')
 xl.Visible = True
@@ -64,7 +69,8 @@ ss = xl.Workbooks.Add()
 ```
 
 ### Step 4: Add VBA Modules and VBA Code
-```xlmodule = ss.VBProject.VBComponents.Add(1)
+```
+xlmodule = ss.VBProject.VBComponents.Add(1)
 
 xlmodule.CodeModule.AddFromString(vba_alert_off)
 xlmodule.CodeModule.AddFromString(vba_alert_on)
@@ -72,7 +78,8 @@ xlmodule.CodeModule.AddFromString(xml_code)
 ```
 
 ### Step 5: Run VBA Code from Python
-```xl.Application.Run( r'AlertOff' )
+```
+xl.Application.Run( r'AlertOff' )
 xl.Application.Run( r'XMLImport' )
 
 ss.SaveAs('/folder/sub-folder/newFileName.xlsx')
