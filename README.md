@@ -8,7 +8,8 @@ execute VBA code, save MS Excel File, close MS Excel File
 - Macro Settings should allow developer VBA project object model before running
 
 ### Step 2: Define VBA Code
-```vba_active_wb = '    ActiveWorkbook.XmlImport URL:= _'
+```
+vba_active_wb = '    ActiveWorkbook.XmlImport URL:= _'
 file_path = 'C:\folder\sub-folder\'
 file_name = 'xmlFile.xml'
 vba_xml_param =f'        , ImportMap:=Nothing, Overwrite:=True, Destination:=Range("$A$A")'
