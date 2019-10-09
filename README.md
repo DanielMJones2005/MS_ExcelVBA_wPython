@@ -25,10 +25,10 @@ print(xml_code)
 ```
 
 ```
-Sub XMLImport()<br/>
-    ActiveWorkbook.XmLImport URL:= _<br/>   
-        "C:\folder\sub-folder\xmlFile.xml" _<br/>
-        , ImportMap:=Nothing, Overwrite:=True, Destination:=Range("$A$A")<br/>
+Sub XMLImport()
+    ActiveWorkbook.XmLImport URL:= _ 
+        "C:\folder\sub-folder\xmlFile.xml" _
+        , ImportMap:=Nothing, Overwrite:=True, Destination:=Range("$A$A")
 End Sub<br/>
 ```
 
@@ -43,8 +43,8 @@ print(alert_off)
 ```
 
 ```
-Sub AlertOff()<br/>
-        Application.DisplayAlerts = False<br/>
+Sub AlertOff()
+        Application.DisplayAlerts = False
 End Sub<br/>
 ```
 
@@ -59,8 +59,8 @@ print(alert_on)
 ```
 
 ```
-Sub AlertOff()<br/>
-        Application.DisplayAlerts = True<br/>
+Sub AlertOff()
+        Application.DisplayAlerts = True
 End Sub<br/>
 ```
 
