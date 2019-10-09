@@ -19,6 +19,7 @@ vba_end = 'End Sub"
 xml_code = f'''Sub XMLImport()
 {vba_active_wb}
         "{file_path}\{file_name}" _
+        {vba_xml_param}
 {vba_end}'''
 
 print(xml_code)
