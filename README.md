@@ -8,7 +8,6 @@ execute VBA code, save MS Excel File, close MS Excel File
 - Macro Settings should allow developer VBA project object model before running
 
 ### Step 2: Define VBA Code
-'''
 vba_active_wb = '    ActiveWorkbook.XmlImport URL:= _'
 file_path = 'C:\folder\sub-folder\'
 file_name = 'xmlFile.xml'
@@ -21,7 +20,8 @@ xml_code = f'''Sub XMLImport()
 {vba_end}'''
 
 print(xml_code)
-'''
+
+
 
 Sub XMLImport()
     ActiveWorkbook.XmLImport URL:= _
@@ -71,7 +71,7 @@ xlmodule.CodeModule.AddFromString(vba_alert_on)
 xlmodule.CodeModule.AddFromString(xml_code)
 
 ### Step 5: Run VBA Code from Python
-xl.Application.Run( r'AlertOff' )
+```xl.Application.Run( r'AlertOff' )
 xl.Application.Run( r'XMLImport' )
 
 ss.SaveAs('/folder/sub-folder/newFileName.xlsx')
@@ -79,4 +79,5 @@ ss.SaveAs('/folder/sub-folder/newFileName.xlsx')
 xl.Application.Run( r'AlertOn' )
 
 ss.Close()
+```
     
