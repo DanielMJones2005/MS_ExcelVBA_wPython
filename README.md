@@ -45,7 +45,7 @@ print(alert_off)
 ```
 Sub AlertOff()
         Application.DisplayAlerts = False
-End Sub<br/>
+End Sub
 ```
 
 ```
