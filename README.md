@@ -61,7 +61,7 @@ print(alert_on)
 ```
 Sub AlertOff()
         Application.DisplayAlerts = True
-End Sub<br/>
+End Sub
 ```
 
 ### Step 3: Import | Activate Excel
