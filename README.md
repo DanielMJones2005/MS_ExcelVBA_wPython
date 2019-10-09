@@ -29,7 +29,7 @@ Sub XMLImport()
     ActiveWorkbook.XmLImport URL:= _ 
         "C:\folder\sub-folder\xmlFile.xml" _
         , ImportMap:=Nothing, Overwrite:=True, Destination:=Range("$A$A")
-End Sub<br/>
+End Sub
 ```
 
 ```
