@@ -1,7 +1,8 @@
 # Creating and Executing MS Excel VBA with Python
 ## Case example of XML Import
 
-Summary: This code will create a new MS Excel file, create a new MS Excel VBA Module, add desired VBA code, 
+Summary: 
+This code will create a new MS Excel file, create a new MS Excel VBA Module, add desired VBA code, 
 execute VBA code, save MS Excel File, close MS Excel File
 
 ### Step 1: Macro Settings
@@ -23,11 +24,13 @@ xml_code = f'''Sub XMLImport()
 print(xml_code)
 ```
 
-Sub XMLImport()<br/>    
-    ActiveWorkbook.XmLImport URL:= _<br/>        
-        "C:\folder\sub-folder\xmlFile.xml" _<br/>        
+```
+Sub XMLImport()<br/>
+    ActiveWorkbook.XmLImport URL:= _<br/>   
+        "C:\folder\sub-folder\xmlFile.xml" _<br/>
         , ImportMap:=Nothing, Overwrite:=True, Destination:=Range("$A$A")<br/>
 End Sub<br/>
+```
 
 ```
 alert_off = "Application.DisplayAlerts = False"
@@ -39,10 +42,11 @@ vba_alert_off = f'''Sub AlertOff()
 print(alert_off)
 ```
 
-
-Sub AlertOff()<br/>        
+```
+Sub AlertOff()<br/>
         Application.DisplayAlerts = False<br/>
 End Sub<br/>
+```
 
 ```
 alert_on = "Application.DisplayAlerts = True"
@@ -54,11 +58,11 @@ vba_alert_on = f'''Sub AlertOn()
 print(alert_on)
 ```
 
-
-Sub AlertOff()<br/>        
+```
+Sub AlertOff()<br/>
         Application.DisplayAlerts = True<br/>
 End Sub<br/>
-
+```
 
 ### Step 3: Import | Activate Excel
 ```
