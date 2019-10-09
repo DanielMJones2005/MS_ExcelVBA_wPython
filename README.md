@@ -23,11 +23,11 @@ xml_code = f'''Sub XMLImport()
 print(xml_code)
 ```
 
-Sub XMLImport()
-    ActiveWorkbook.XmLImport URL:= _
-        "C:\folder\sub-folder\xmlFile.xml" _
-        , ImportMap:=Nothing, Overwrite:=True, Destination:=Range("$A$A")
-End Sub
+Sub XMLImport()<br/>
+    ActiveWorkbook.XmLImport URL:= _<br/>
+        "C:\folder\sub-folder\xmlFile.xml" _<br/>
+        , ImportMap:=Nothing, Overwrite:=True, Destination:=Range("$A$A")<br/>     
+End Sub<br/>
 
 ```
 alert_off = "Application.DisplayAlerts = False"
@@ -40,9 +40,9 @@ print(alert_off)
 ```
 
 
-Sub AlertOff()
-        Application.DisplayAlerts = False
-End Sub
+Sub AlertOff()<br/>
+        Application.DisplayAlerts = False<br/>
+End Sub<br/>
 
 ```
 alert_on = "Application.DisplayAlerts = True"
@@ -55,9 +55,9 @@ print(alert_on)
 ```
 
 
-Sub AlertOff()
-        Application.DisplayAlerts = True
-End Sub
+Sub AlertOff()<br/>
+        Application.DisplayAlerts = True<br/>
+End Sub<br/>
 
 
 ### Step 3: Import | Activate Excel
