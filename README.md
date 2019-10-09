@@ -8,7 +8,7 @@ execute VBA code, save MS Excel File, close MS Excel File
 - Macro Settings should allow developer VBA project object model before running
 
 ### Step 2: Define VBA Code
-vba_active_wb = '    ActiveWorkbook.XmlImport URL:= _'
+```vba_active_wb = '    ActiveWorkbook.XmlImport URL:= _'
 file_path = 'C:\folder\sub-folder\'
 file_name = 'xmlFile.xml'
 vba_xml_param =f'        , ImportMap:=Nothing, Overwrite:=True, Destination:=Range("$A$A")'
@@ -20,8 +20,7 @@ xml_code = f'''Sub XMLImport()
 {vba_end}'''
 
 print(xml_code)
-
-
+```
 
 Sub XMLImport()
     ActiveWorkbook.XmLImport URL:= _
@@ -57,18 +56,20 @@ End Sub
 
 
 ### Step 3: Import | Activate Excel
-import win32com.client
+```import win32com.client
 
 xl = win32com.cleint.gencache.EnsureDispatch('Excel.Application')
 xl.Visible = True
 ss = xl.Workbooks.Add()
+```
 
 ### Step 4: Add VBA Modules and VBA Code
-xlmodule = ss.VBProject.VBComponents.Add(1)
+```xlmodule = ss.VBProject.VBComponents.Add(1)
 
 xlmodule.CodeModule.AddFromString(vba_alert_off)
 xlmodule.CodeModule.AddFromString(vba_alert_on)
 xlmodule.CodeModule.AddFromString(xml_code)
+```
 
 ### Step 5: Run VBA Code from Python
 ```xl.Application.Run( r'AlertOff' )
